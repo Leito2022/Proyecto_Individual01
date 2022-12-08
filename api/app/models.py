@@ -1,4 +1,4 @@
-from sqlalchemy import Table,Boolean, Column, ForeignKey, Integer, String
+""" from sqlalchemy import Table,Boolean, Column, ForeignKey, Integer, String
 from database import engine, meta_data
 
 from sqlalchemy.orm import relationship
@@ -29,4 +29,4 @@ users = Table("pelicula",meta_data,
             Column("plataforma", String)
             )
 
-meta_data.create_all(engine)
+meta_data.create_all(engine) """

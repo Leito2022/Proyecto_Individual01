@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+""" from pydantic import BaseModel
 from typing import Optional
 from typing import Union
     
@@ -16,3 +16,4 @@ class UserRequestModel(BaseModel):
     ano: int
     plataforma: str
 
+ """

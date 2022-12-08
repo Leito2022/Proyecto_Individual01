@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, MetaData
+""" from sqlalchemy import create_engine, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import pymysql
@@ -22,3 +22,4 @@ conexion = pymysql.connect(host= "localhost",
                         db = "proyectoind")
 
 cursor = conexion.cursor()
+ """

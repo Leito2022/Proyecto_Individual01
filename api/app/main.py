@@ -27,7 +27,8 @@ def startup():
 def shutdown():
   if not conexion.closed():
     conexion.close() """
-
+    
+#Creo la consulta n° 1 
 @app.get("/get_max_duration/")
 def consulta1(plataforma: str, ano: int, tipo: str):
   plat = plataforma
@@ -45,6 +46,7 @@ def consulta1(plataforma: str, ano: int, tipo: str):
 
   return {"respuesta": respuesta}
 
+#Creo la consulta n° 2
 @app.get("/get_count_plataform/")
 def consulta2(plataforma: str):
   plat1 = plataforma
@@ -59,6 +61,7 @@ def consulta2(plataforma: str):
 
   return {"respuesta": respuesta}
 
+#Creo la consulta n° 3
 
 @app.get("/get_listedin/")
 def consulta3(genero: str):
@@ -78,6 +81,7 @@ def consulta3(genero: str):
   return {"respuesta": respuesta}
 
 
+#Creo la consulta n° 4
 @app.get("/get_actor/")
 def consulta4(plataforma: str, año: int):
   plat = plataforma
@@ -95,14 +99,5 @@ def consulta4(plataforma: str, año: int):
   respuesta = cursor.fetchall()
 
   return {"respuesta": respuesta}
-  
-#@app.on_event('startup')
-# def startup():
-#    if conexion.is_closed():
- #       conexion.connect()
 
-#@app.on_event('shutdown')
-# def shutdown():
-#    if not conexion.is_closed():
-  #      conexion.close()
 
