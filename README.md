@@ -28,4 +28,19 @@
  
 4. FastAPI (ADVERTENCIA)
 
- En el archivo main.py encontraremos la importación de la librería fastAPI junto con la variable que lo ejecuta.
+ En el archivo main.py encontraremos la importación de la librería fastAPI junto con la variable que lo ejecuta. Funciona correctamente y es posible mandarle los gets solicitados.
+
+ Debido a los constantes errores no fue posible crear una estructura más ordenada. La idea original era crear con sqlalchemist el ecosistema necesario para las consultas, esto es crear el route, el database, el model y los schemas. Pero por alguna razón, era constante el error donde al ejecutar uvicorn no detectaba las routers creados ni tampoco se detectaba los imports entre archivos a pesar de que a nivel script si se detectaban (Por ejemplo: al ejecutar una conexion en main.py importando la variable desde el archivo database.py traía un error de que no se encontraba el modulo database a pesar de que la sintaxis era correcta).
+ Es por ello que para sortear este problema, tanto los parametros como las querys debieron realizarse en el main y usando pymysql para su gestión.
+
+5. Docker
+
+ A pesar de ser dos simples pasos generan diferentes complicaciones a la hora de generar una imagen, en principio se generaba bien pero luego al querer eliminar y reconstruir la imagen ya no se creaba por razones que desconozco. Otro de los problemas es modificar los puertos para que el cliente pueda usar la base de datos (ya que de por sí no cuenta con dicha base en su sistema local).
+ 
+6. Presentación Final
+
+ Puedes observar todo el proceso que realicé en el siguiente video:
+ 
+ XXXX:...com
+ 
+ 
